@@ -1,0 +1,19 @@
+data_dimas_csv = read.csv("C:/Users/dimas humam/Documents/DATA2021_1.csv",header = TRUE,sep = ";")
+
+View(data_dimas_csv)
+
+mean(data_dimas_csv$LAMA.PERJALANAN)
+
+str(data_dimas_csv)
+
+install.packages("xlsx")
+
+library("xlsx")
+
+data_dimas_xlsx = read.xlsx("C:/Users/dimas humam/Documents/DATA2021.xlsx", 1)
+
+View(data_dimas_xlsx)
+
+mean(data_dimas_xlsx$LAMA.PERJALANAN)
+
+str(data_dimas_xlsx)

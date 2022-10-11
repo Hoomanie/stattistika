@@ -1,0 +1,11 @@
+library(RMySQL)
+con = dbConnect(MySQL(), user='root', password='',dbname= 'ps2_dimas',host='localhost')
+dbListTables(con)
+myQuery<-"select*from data2021;"
+df<-dbGetQuery(con, myQuery)
+
+data_data2021_csv = read.csv("C:/Users/dimas humam/Documents/data2021.csv",header = TRUE, sep = ";")
+View(data_data2021_csv)
+library(dplyr)
+data_data2021_csv<-filter(data_data2021_csv,GENDER=="P")
+print(data_data2021_csv)
